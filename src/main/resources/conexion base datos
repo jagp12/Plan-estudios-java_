@@ -1,0 +1,64 @@
+# VAR1= CONTENIDO DE VALOR1
+# My.VAR2= 100_
+
+# VAR1: CONTENIDO DE VALOR1
+# My:
+# VAR2: 100
+server.port = 8080
+spring.profiles.active=perfil2
+url=valor_url\
+password=valor_password
+
+# Poner endpoint para consola H2. Desde ella podremos manejar las tablas, realizar select,insert, etc.
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Parametros conexión a base de datos
+spring.datasource.url=jdbc:h2:file:~/test09
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+hibernate.dialect=org.hibernate.dialect.HSQLDialect
+spring.jpa.hibernate.ddl-auto=create-drop
+
+# Mostrar las sentencias SQL ejecutadas por JPA.
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+
+
+#potsgre
+#inicio gabriel
+spring.jpa.database=POSTGRESQL
+spring.datasource.platform=postgres
+#spring.datasource.url=jdbc:postgresql://postgres_test:5432/postgres
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+#spring.datasource.username=postgres
+spring.datasource.password=Tutu68
+
+spring.jpa.show.sql=true
+spring.jpa.generate-dll=true
+spring.jpa.hibernate.dll-auto=create-drop
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+#fin gabriel
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.hibernate.show-sql=true
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=Tutu67
+
+spring.datasource.initialization-mode=always
+spring.datasource.initialize=true
+spring.datasource.schema=classpath:/schema.sql
+spring.datasource.continue-on-error=true
+#postgres://postgres:postgrespw@localhost:49153
+#postgres://postgres:postgrespw@postgres:5432
+
+#KAFKA
+message.topic.name=mitopic1
+message.topic.name2=mitopic2
+message.group.name=groupid
+spring.kafka.bootstrap-servers=localhost:2181
+spring.kafka.consumer.group-id=myGroup
